@@ -1,0 +1,39 @@
+@import url(http://fonts.googleapis.com/earlyaccess/notosansjp.css);
+@import url(https://fonts.googleapis.com/css?family=Modern+Antiqua);
+
+body{
+    font: 14px;
+    font-weight: 300;
+    -webkit-text-size-adjust: 100%;
+    color: #000;
+    background: #fff;
+}
+
+a{
+    color: #0066ff;
+    text-decoration: none;
+}
+
+a:hover, .active{
+    text-decoration: underline;
+}
+
+#mainnav a{
+    color: #000;
+    font-family: 'Modern Antiqua', 'Noto Sans JP',serif;
+}
+
+#footer{
+    clear: both;
+    padding: 50px 10px 50px 0;
+    text-align: center;
+    font-size:12px;
+}
+
+h1, h2{
+    font-family: 'Modern Antiqua', 'Noto Sans JP',serif;
+}
+
+section{
+    clear: both;
+}
