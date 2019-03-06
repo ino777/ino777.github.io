@@ -37,3 +37,11 @@ h1, h2{
 section{
     clear: both;
 }
+
+#sidebar{
+    display: block;
+}
+
+.panel{
+    display: block;
+}
