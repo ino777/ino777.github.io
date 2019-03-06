@@ -27,7 +27,7 @@ $(function(){
  		return false;
 	});
 	
-	/*$('.panel').hide();*/
+	$('.panel').hide();
 	$('#menuWrap').toggle(function(){
 		$(this).next().slideToggle();
 		$('#menuBtn').toggleClass('close');
