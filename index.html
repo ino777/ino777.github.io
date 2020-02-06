@@ -1,36 +1,150 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="discription" content="Manato's Home Page">
-        <meta name="viewport" content="width=device-width">
-        <title>My Home Page</title>
-        <link rel="stylesheet" media="all" href="css/style.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-        <script src="js/script.js"></script>
-    </head>
-    <body id="top">
-        <div id="wrapper">
-            <h1>Welcome to My Home Page!!</h1>
 
-            <div id="sidebar">
-                <nav id="mainnav">
-                    <div class="panel">
-                        <ul>
-                            <li><a href="#top">TOP</a></li>
-                        </ul>
-                    </div>
-                </nav>
+<head>
+    <meta charset="utf-8">
+    <meta name="discription" content="ino777's Home Page">
+    <meta name="viewport" content="width=device-width">
+    <title>My Portfolio</title>
+    <!-- UIkit CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.9/css/uikit.min.css" />
+    <link rel="stylesheet" media="all" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- navbar -->
+        <div uk-sticky="sel-target:.uk-navbar-container; cls-active:uke-navbar-sticky">
+            <nav class="uk-navbar-container" uk-navbar>
+                <div class="uk-navbar-left">
+                    <ul class="uk-navbar-nav">
+                        <li class="uk-active">
+                            <a href="https://twitter.com/mi_mato" target="blank"><span uk-icon="twitter"></span></a>
+                        </li>
+                        <li class="uk-active">
+                            <a href="https://github.com/ino777" target="blank"><span uk-icon="github"></span></a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="uk-navbar-right">
+                    <ul class="uk-navbar-nav uk-visible@s">
+                        <li class="uk-active">
+                            <a href="#top" uk-icon="home"></a>
+                        </li>
+                        <li class="uk-active">
+                            <a href="#profile">Profile</a>
+                        </li>
+                        <li class="uk-active">
+                            <a href="#photos">Photos</a>
+                        </li>
+                        <li class="uk-active">
+                            <a href="#products">Products</a>
+                        </li>
+                    </ul>
+                    <!-- devide width 640px and smaller -->
+                    <button type="button" class="uk-hidden@s uk-button uk-button-default" uk-toggle="target:#SideBar" id="sidebar-toggle">
+                        <span uk-icon="menu" class="toggle-icon" id="menu-icon"></span>
+                    </button>
+                </div>
+            </nav>
+        </div>
+
+        <!-- sidebar -->
+        <!-- device width 640px and larger -->
+        <div id="SideBar" uk-offcanvas="flip:true; overly:true;">
+            <div class="uk-offcanvas-bar uk-nav-center">
+                <button type="button" class="uk-offcanvas-close" uk-close></button>
+                <h4>
+                    <a href="#top" uk-icon="home"></a>
+                </h4>
+                <h4><a href="#profile">Profile</a></h4>
+                <h4><a href="#photos">Photos</a></h4>
+                <h4><a href="#products">Products</a></h4>
             </div>
+        </div>
 
-            <div class="content">
-                <section id="sec01">
-                        coming soon...
+        <!-- main content -->
+        <div id="content" class="">
+            <div class="container">
+
+                <!-- TOP -->
+                <section id="top">
+                    <div data-src="./images/aerial-architecture-buildings-2738173.jpg" class="sec-cover uk-background-cover uk-panel uk-flex uk-flex-center uk-flex-middle" id="profile-cover" uk-img>
+                        <h1 class="uk-h1 uk-margin-remove uk-dark">
+                            Welcome to My Portfolio!!
+                        </h1>
+                    </div>
+                </section>
+
+                <!-- Profile -->
+                <section id="profile">
+                    <div data-src="./images/sample01.jpeg" class="sec-cover uk-background-cover uk-panel uk-flex uk-flex-center uk-flex-middle" id="profile-cover" uk-img>
+                        <h3 class="uk-h1 uk-margin-remove uk-light">
+                            Profile
+                        </h3>
+                    </div>
+                </section>
+
+                <!-- Photos -->
+                <section class="uk-section" id="photos">
+                    <div>
+                        <hr>
+                        <h3 class="uk-h1 uk-center uk-dark">
+                            Photos
+                        </h3>
+
+                        <div class="uk-background-secondary" id="photos-cover">
+                            <div class="uk-container">
+
+                                <!-- devide width 640px and larger -->
+                                <div class="uk-visible@s uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slideshow>
+                                    <ul class="uk-slideshow-items">
+                                        <li>
+                                            <img data-src="./images/apple-black-and-white-black-and-white-169573.jpg" width="1200" height="900" uk-cover uk-img="target: !.uk-slideshow-items">
+                                        </li>
+                                        <li>
+                                            <img data-src="./images/action-adult-clouds-1583582.jpg" width="1200" height="900" uk-cover uk-img="target: !.uk-slideshow-items">
+                                        </li>
+                                    </ul>
+                                    <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
+                                    <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
+                                </div>
+
+                                <!-- device width 640px and smaller -->
+                                <div class="uk-hidden@s uk-position-relative uk-light">
+                                    <img data-src="./images/apple-black-and-white-black-and-white-169573.jpg" width="1200" height="900" uk-img>
+                                    <img data-src="./images/action-adult-clouds-1583582.jpg" width="1200" height="900" uk-img>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Products -->
+                <section id="products">
+                    <div data-src="./images/apple-black-and-white-black-and-white-169573.jpg" class="sec-cover uk-background-cover uk-panel uk-flex uk-flex-center uk-flex-middle" id="photos-cover" uk-img>
+                        <h3 class="uk-h1 uk-margin-remove uk-light">
+                            Products
+                        </h3>
+                    </div>
                 </section>
             </div>
         </div>
+
+        <!-- footer -->
         <footer id="footer">
-            coming soon...
         </footer>
-    </body>
+    </div>
+
+    <!-- UIkit JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.9/js/uikit.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.9/js/uikit-icons.min.js"></script>
+
+
+</body>
+
 </html>
